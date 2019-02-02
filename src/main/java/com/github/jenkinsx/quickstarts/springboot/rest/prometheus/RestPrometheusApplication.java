@@ -27,6 +27,12 @@ public class RestPrometheusApplication {
         return singletonMap("hello", "world");
 	}
 
+	@GetMapping(path = "/nipuna", produces = "application/json")
+	@ResponseBody
+	public Map<String, Object> nipunasApi(){
+		return singletonMap("Nipuna", "awesome!");
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(RestPrometheusApplication.class, args);
 	}
